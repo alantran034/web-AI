@@ -11,7 +11,7 @@ app = FastAPI()
 # Cấu hình để truy cập hình ảnh từ web 
 app.mount("/static", StaticFiles(directory="static"), name="static")
 templates = Jinja2Templates(directory="templates")
-model = YOLO('./model/yolo11n.pt')
+model = YOLO('model/yolo11n.pt')
 
 # Đảm bảo các thư mục tồn tại
 os.makedirs("static/results", exist_ok=True)
